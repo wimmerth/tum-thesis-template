@@ -1,0 +1,61 @@
+\frontmatter
+% ----------------------------------------------------------------
+\begin{titlepage}
+\begin{center}
+{\huge Technical University of Munich\\}
+{\Large School of Computation, Information and Technology - Informatics\\}
+\vspace{3.5cm}
+{\huge \getDoctype\\}
+\vspace{4cm}
+{\Huge \bfseries \getTitle\\}
+\vspace{1.5cm}
+{\huge \getAuthor\\}
+\vfill
+\includegraphics[width=0.35\textwidth]{layout/tum_logo}
+\end{center}
+\end{titlepage}
+%------------------------------------------------------------------
+\begin{titlepage}
+\begin{center}
+{\huge Technical University of Munich\\}
+{\Large School of Computation, Information and Technology - Informatics\\}
+\vspace{2cm}
+{\huge \getDoctype\\}
+\vspace{1.5cm}
+{\Huge \bfseries \getTitle\\}
+\vspace{1cm}
+{\Huge \bfseries \getTitleGer\\}
+\vspace{2.5 cm}{\Large
+\begin{tabular}{ll}
+Author:          & \getAuthor         \\[8pt]
+Examiner:        & \getExaminer       \\[8pt]
+Supervisor:     & \getSupervisor     \\[8pt]
+Submission Date: & \getSubmissionDate \\
+\end{tabular}
+}
+\vfill
+\includegraphics[width=0.35\textwidth]{layout/tum_logo}
+\end{center}
+\end{titlepage}
+%------------------------------------------------------------------
+\cleardoublepage{}
+
+\thispagestyle{empty}
+\vspace*{0.8\textheight}
+\noindent
+\makeatletter
+I confirm that this {\getDoctype} is my own work and I have documented all sources and material used.
+\makeatother
+
+\vspace{15mm}
+\noindent
+\getSubmissionLocation, \getSubmissionDate \hspace{60mm} \getAuthor % TODO
+
+\cleardoublepage{}
+%------------------------------------------------------------------
+\chapter{Abstract}
+\getAbstract
+%------------------------------------------------------------------
+\tableofcontents{}
+%------------------------------------------------------------------
+\mainmatter

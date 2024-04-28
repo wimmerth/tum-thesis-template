@@ -1,0 +1,55 @@
+\documentclass[a4paper,11pt,oneside]{book}
+
+\newcommand*{\getTitle}{Thesis title}
+\newcommand*{\getTitleGer}{Titel der Abschlussarbeit}
+\newcommand*{\getAuthor}{Author}
+\newcommand*{\getDoctype}{Thesis type (Bachelor's Thesis in Informatics, Master's Thesis in Informatics: Games Engineering, \ldots)}
+\newcommand*{\getExaminer}{Examiner (Professor)}
+\newcommand*{\getSupervisor}{Supervisor (usually PhD)}
+\newcommand*{\getSubmissionDate}{Submission date}
+\newcommand*{\getSubmissionLocation}{Submission location}
+
+\newcommand*{\getAbstract}{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+
+At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.}
+
+\input{layout/settings}
+
+% hyperref should be the last package that gets imported
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\input{layout/layout}
+
+\chapter{Chapter}
+All information on current thesis formatting guidelines can be found \href{https://www.cit.tum.de/en/cit/studies/students/thesis-completing-your-studies/informatics/}{on the official website}. \textbf{Check these instructions and make sure that this template still matches them.}
+
+I modified the citation style to fit my preferences. Citations in text can and should be used with the \texttt{citep} and \texttt{citet} commands:
+
+\citet{wimmer2024back} presented a few-shot keypoint detection method for 3D shapes. Their approach leverages features from large pre-trained 2D vision models and uses a geodesic distance-based keypoint optimization to achieve a new state-of-the-art by a large margin~\citep{wimmer2024back}.
+
+
+\section{Section}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+\subsection{Subsection}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+\subsubsection{Subsubsection}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+\paragraph{Paragraph}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+
+\floatingbox{This is a custom box that you can use to place some information that you consider as important to highlight or for information that doesn't really fit into the current context but that is important to add still.}
+
+\floatingbox[R][.5\textwidth]{\textbf{Hint:} You can also make this text box smaller and let text wrap around it. This might be useful for providing small bits of information.}
+At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+\bibliographystyle{abbrvnat}
+\bibliography{bibliography}
+
+\appendix
+\chapter{Appendix}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+
+
+\end{document}

@@ -1,0 +1,82 @@
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[textwidth=16cm,textheight=23cm]{geometry}
+\setlength{\parindent}{6pt}
+\setlength{\parskip}{8pt}
+\usepackage{titlesec}
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{ifthen}
+\usepackage{wrapfig}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+
+% Define citation color
+\definecolor{citblue}{HTML}{2d576b}
+
+% Define TUM corporate design colors
+% Taken from http://portal.mytum.de/corporatedesign/index_print/vorlagen/index_farben
+\definecolor{TUMBlue}{HTML}{0065BD}
+\definecolor{TUMSecondaryBlue}{HTML}{005293}
+\definecolor{TUMSecondaryBlue2}{HTML}{003359}
+\definecolor{TUMBlack}{HTML}{000000}
+\definecolor{TUMWhite}{HTML}{FFFFFF}
+\definecolor{TUMDarkGray}{HTML}{333333}
+\definecolor{TUMGray}{HTML}{808080}
+\definecolor{TUMLightGray}{HTML}{CCCCC6}
+\definecolor{TUMAccentGray}{HTML}{DAD7CB}
+\definecolor{TUMAccentOrange}{HTML}{E37222}
+\definecolor{TUMAccentGreen}{HTML}{A2AD00}
+\definecolor{TUMAccentLightBlue}{HTML}{98C6EA}
+\definecolor{TUMAccentBlue}{HTML}{64A0C8}
+
+\newtcolorbox{mybox}{
+    enhanced,
+    frame hidden,
+    borderline west = {0.5pt}{0pt}{black},
+    boxrule=0pt,
+    arc=0pt,
+    outer arc=0pt,
+    left=5pt,
+    right=5pt,
+    top=5pt,
+    bottom=5pt,
+    boxsep=0pt,
+}
+
+\NewDocumentCommand{\floatingbox}{ O{L} O{\textwidth} m }{%
+    \ifthenelse{\equal{#2}{\textwidth}}{
+        \begin{mybox}
+            #3
+        \end{mybox}
+    }{
+        \begin{wrapfigure}{#1}{#2}
+            \begin{mybox}
+                #3
+            \end{mybox}
+        \end{wrapfigure}
+    }
+}
+
+% Redefine \citet command
+\let\oldcitet\citet
+\renewcommand{\citet}[1]{%
+    \citeauthor{#1}%
+    \ \textcolor{citblue}{[\citeyear{#1}]}%
+}
+
+% Redefine \citep command
+\let\oldcitep\citep
+\renewcommand{\citep}[1]{%
+    \textcolor{citblue}{\oldcitep{#1}}%
+}
+
+% Define norm and abs for convenience
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+\newcommand\abs[1]{\left\lvert#1\right\rvert}
